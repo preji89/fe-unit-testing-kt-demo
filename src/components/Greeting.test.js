@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import Greeting from './Greeting';
 
 
-  test('renders "Hello World" as a text', () => {
+  test('should renders "Hello World"', () => {
     // Arrange
     render(<Greeting />);
 
@@ -14,7 +14,7 @@ import Greeting from './Greeting';
     expect(helloWorldElement).toBeInTheDocument();
   });
 
-  test('renders "good to see" you if the button was NOT clicked', () => {
+  test('should render "good to see" you if the button was NOT clicked', () => {
     render(<Greeting />);
 
     const outputElement = screen.getByText('good to see you', { exact: false });
